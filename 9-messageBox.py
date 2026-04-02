@@ -9,10 +9,16 @@ root.iconbitmap('logo.ico')
 # showinfo, showwarning, showerror, askquestion, askokcancel, askyesno
 
 def popup():
-    response = messagebox.askyesno("This is my Popup!", "Hello Word") # the first text is the box name, and the second one is the content inside this box
+    response = messagebox.askquestion("This is my Popup!", "Hello Word") # the first text is the box name, and the second one is the content inside this box
     
     #askyesno, askokcancel
-    if response == 1:
+    # if response == 1:
+    #     Label(root, text="You Clicked Yes!").pack()
+    # else:
+    #     Label(root, text="You Clicked No!").pack()
+
+    # askquestion
+    if response == "yes":
         Label(root, text="You Clicked Yes!").pack()
     else:
         Label(root, text="You Clicked No!").pack()
